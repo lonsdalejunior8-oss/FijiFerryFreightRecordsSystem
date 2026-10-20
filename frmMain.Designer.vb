@@ -85,13 +85,13 @@ Partial Class frmMain
         ' mnuOpen
         ' 
         mnuOpen.Name = "mnuOpen"
-        mnuOpen.Size = New Size(270, 34)
+        mnuOpen.Size = New Size(242, 34)
         mnuOpen.Text = "Open Cargo File"
         ' 
         ' mnuSave
         ' 
         mnuSave.Name = "mnuSave"
-        mnuSave.Size = New Size(270, 34)
+        mnuSave.Size = New Size(242, 34)
         mnuSave.Text = "Save Cargo File"
         ' 
         ' ViewToolStripMenuItem
@@ -362,7 +362,7 @@ Partial Class frmMain
         ' cboStatus
         ' 
         cboStatus.FormattingEnabled = True
-        cboStatus.Items.AddRange(New Object() {"Booked", "Loaded", "Collected", "Delivered"})
+        cboStatus.Items.AddRange(New Object() {"Booked", "Loaded", "Collected"})
         cboStatus.Location = New Point(351, 643)
         cboStatus.Name = "cboStatus"
         cboStatus.Size = New Size(310, 33)

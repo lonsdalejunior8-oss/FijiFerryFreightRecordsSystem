@@ -123,7 +123,7 @@ Partial Class frmMain
         ' mnuSearch
         ' 
         mnuSearch.Name = "mnuSearch"
-        mnuSearch.Size = New Size(270, 34)
+        mnuSearch.Size = New Size(219, 34)
         mnuSearch.Text = "Find Booking"
         ' 
         ' ReportsToolStripMenuItem

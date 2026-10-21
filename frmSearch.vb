@@ -124,5 +124,22 @@
 
     End Sub
 
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
 
+        txtSearch.Clear()
+
+        lstResults.Items.Clear()
+
+        txtBookingID.Clear()
+        txtCustomerName.Clear()
+        txtRoute.Clear()
+        txtDate.Clear()
+        txtCargoType.Clear()
+        txtWeight.Clear()
+        txtStatus.Clear()
+
+        radBookingID.Checked = True
+
+        txtSearch.Focus()
+    End Sub
 End Class

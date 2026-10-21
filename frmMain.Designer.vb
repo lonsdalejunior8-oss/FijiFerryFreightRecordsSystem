@@ -123,7 +123,7 @@ Partial Class frmMain
         ' mnuSearch
         ' 
         mnuSearch.Name = "mnuSearch"
-        mnuSearch.Size = New Size(219, 34)
+        mnuSearch.Size = New Size(270, 34)
         mnuSearch.Text = "Find Booking"
         ' 
         ' ReportsToolStripMenuItem
@@ -392,7 +392,7 @@ Partial Class frmMain
         ' 
         ' frmMain
         ' 
-        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1014, 862)
         Controls.Add(btnClear)

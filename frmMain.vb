@@ -232,4 +232,13 @@
         SaveCargoFile()
 
     End Sub
+
+    Private Sub mnuSearch_Click(sender As Object,
+                            e As EventArgs) Handles mnuSearch.Click
+
+        Dim frm As New frmSearch
+        frm.ShowDialog()
+
+    End Sub
+
 End Class

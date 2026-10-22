@@ -1,19 +1,35 @@
 ﻿Public Class frmSearch
 
 
-    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+    Private Sub btnSearch_Click(sender As Object,
+                            e As EventArgs) Handles btnSearch.Click
 
         If txtSearch.Text.Trim = "" Then
 
             MessageBox.Show(
-            "Please enter a search value.")
+            "Please enter a search value.",
+            "Search",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Warning)
+
+            Exit Sub
+
+        End If
+
+        If Not radBookingID.Checked AndAlso
+       Not radCustomerName.Checked Then
+
+            MessageBox.Show(
+            "Please select Booking ID or Customer Name.",
+            "Search",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Warning)
 
             Exit Sub
 
         End If
 
         lstResults.Items.Clear()
-
 
         If radBookingID.Checked Then
 
@@ -24,7 +40,6 @@
             SearchByCustomerName()
 
         End If
-
 
     End Sub
 
@@ -52,7 +67,7 @@
         If Not Found Then
 
             MessageBox.Show(
-            "No matching customers found.")
+            "Customer Name not Found !")
 
         End If
 
@@ -90,7 +105,7 @@
 
         If Not Found Then
 
-            MessageBox.Show("Booking ID not found.")
+            MessageBox.Show("Booking ID not Found!.")
 
         End If
 
@@ -138,8 +153,10 @@
         txtWeight.Clear()
         txtStatus.Clear()
 
-        radBookingID.Checked = True
+        radBookingID.Checked = False
+        radCustomerName.Checked = False
 
         txtSearch.Focus()
     End Sub
+
 End Class

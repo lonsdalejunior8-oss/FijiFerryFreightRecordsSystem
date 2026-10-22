@@ -26,6 +26,7 @@ Partial Class frmCollectedReport
         grpCollected = New GroupBox()
         lstCollectedCargo = New ListBox()
         btnClose = New Button()
+        btnExport = New Button()
         grpCollected.SuspendLayout()
         SuspendLayout()
         ' 
@@ -42,9 +43,9 @@ Partial Class frmCollectedReport
         ' grpCollected
         ' 
         grpCollected.Controls.Add(lstCollectedCargo)
-        grpCollected.Location = New Point(12, 91)
+        grpCollected.Location = New Point(47, 90)
         grpCollected.Name = "grpCollected"
-        grpCollected.Size = New Size(818, 403)
+        grpCollected.Size = New Size(657, 383)
         grpCollected.TabIndex = 1
         grpCollected.TabStop = False
         grpCollected.Text = "Collected Cargo Records"
@@ -54,23 +55,35 @@ Partial Class frmCollectedReport
         lstCollectedCargo.FormattingEnabled = True
         lstCollectedCargo.Location = New Point(21, 30)
         lstCollectedCargo.Name = "lstCollectedCargo"
-        lstCollectedCargo.Size = New Size(776, 329)
+        lstCollectedCargo.Size = New Size(610, 329)
         lstCollectedCargo.TabIndex = 0
         ' 
         ' btnClose
         ' 
-        btnClose.Location = New Point(647, 537)
+        btnClose.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnClose.Location = New Point(406, 519)
         btnClose.Name = "btnClose"
-        btnClose.Size = New Size(112, 34)
+        btnClose.Size = New Size(135, 39)
         btnClose.TabIndex = 2
         btnClose.Text = "Close"
         btnClose.UseVisualStyleBackColor = True
+        ' 
+        ' btnExport
+        ' 
+        btnExport.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnExport.Location = New Point(196, 519)
+        btnExport.Name = "btnExport"
+        btnExport.Size = New Size(159, 39)
+        btnExport.TabIndex = 3
+        btnExport.Text = "Export Report"
+        btnExport.UseVisualStyleBackColor = True
         ' 
         ' frmCollectedReport
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(842, 628)
+        ClientSize = New Size(842, 599)
+        Controls.Add(btnExport)
         Controls.Add(btnClose)
         Controls.Add(grpCollected)
         Controls.Add(lblTitle)
@@ -86,4 +99,5 @@ Partial Class frmCollectedReport
     Friend WithEvents grpCollected As GroupBox
     Friend WithEvents lstCollectedCargo As ListBox
     Friend WithEvents btnClose As Button
+    Friend WithEvents btnExport As Button
 End Class

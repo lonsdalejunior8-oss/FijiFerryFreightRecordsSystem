@@ -23,5 +23,10 @@ Module CargoData
     Public FileLoaded As Boolean = False
 
     Public DataChanged As Boolean = False
+    Public Function CalculateFreight(
+    ByVal weight As Decimal,
+    ByVal rate As Decimal) As Decimal
 
+        Return weight * rate
+    End Function
 End Module

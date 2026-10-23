@@ -2,7 +2,7 @@
 
     '=========================================
     ' Function: Calculate Freight Charge
-    '=========================================
+   
     Private Function CalculateFreight(weight As Double,
                                       rate As Double) As Double
 
@@ -231,5 +231,34 @@
 
         SaveCargoFile()
 
+    End Sub
+
+    Private Sub mnuStatistics_Click(sender As Object, e As EventArgs) Handles mnuStatistics.Click
+
+
+        If Not FileLoaded OrElse RecordCount = 0 Then
+            MessageBox.Show("Please load a cargo file first.")
+            Return
+        End If
+
+        Using stats As New frmStatistics()
+            stats.ShowDialog(Me)
+        End Using
+    End Sub
+
+    Private Sub ViewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub mnuRouteSummary_Click(sender As Object, e As EventArgs) Handles mnuRouteSummary.Click
+        If RecordCount = 0 Then
+            MessageBox.Show(
+                "Please load a valid cargo bookings file first.")
+            Return
+        End If
+
+        Using frm As New frmRouteSummary()
+            frm.ShowDialog(Me)
+        End Using
     End Sub
 End Class

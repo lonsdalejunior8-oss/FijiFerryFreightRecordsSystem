@@ -244,4 +244,19 @@
     Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
 
     End Sub
+
+    Private Sub mnuExit_Click(sender As Object, e As EventArgs) Handles mnuExit.Click
+        Dim result As DialogResult
+
+        result = MessageBox.Show(
+            "Are you sure you want to exit FijiFerry Freight Records System?",
+            "Exit Application",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question)
+
+        If result = DialogResult.Yes Then
+            Application.Exit()
+        End If
+
+    End Sub
 End Class

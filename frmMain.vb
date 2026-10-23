@@ -144,7 +144,7 @@
 
     Private Sub btnClear_Click(sender As Object,
                            e As EventArgs) _
-                           Handles btnClear.Click
+                           Handles btnClear.Click, btnClear.Click
 
         ClearDisplay()
 
@@ -230,6 +230,18 @@
                           Handles mnuSave.Click
 
         SaveCargoFile()
+
+    End Sub
+
+    Private Sub lblCargoBookings_Click(sender As Object, e As EventArgs) Handles lblCargoBookings.Click
+
+    End Sub
+
+    Private Sub lblNewStatus_Click(sender As Object, e As EventArgs) Handles lblNewStatus.Click
+
+    End Sub
+
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
 
     End Sub
 End Class

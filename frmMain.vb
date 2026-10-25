@@ -2,7 +2,7 @@
 
     '=========================================
     ' Function: Calculate Freight Charge
-   
+
     Private Function CalculateFreight(weight As Double,
                                       rate As Double) As Double
 
@@ -144,7 +144,7 @@
 
     Private Sub btnClear_Click(sender As Object,
                            e As EventArgs) _
-                           Handles btnClear.Click
+                           Handles btnClear.Click, btnClear.Click
 
         ClearDisplay()
 
@@ -251,14 +251,57 @@
     End Sub
 
     Private Sub mnuRouteSummary_Click(sender As Object, e As EventArgs) Handles mnuRouteSummary.Click
+
         If RecordCount = 0 Then
+
             MessageBox.Show(
-                "Please load a valid cargo bookings file first.")
+            "Please load a valid cargo bookings file first.")
+
             Return
+
         End If
 
         Using frm As New frmRouteSummary()
+
             frm.ShowDialog(Me)
+
         End Using
+
+    End Sub
+
+    Private Sub lblCargoBookings_Click(sender As Object, e As EventArgs) Handles lblCargoBookings.Click
+
+    End Sub
+
+    Private Sub lblNewStatus_Click(sender As Object, e As EventArgs) Handles lblNewStatus.Click
+
+    End Sub
+
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+
+    End Sub
+
+    Private Sub mnuExit_Click(sender As Object, e As EventArgs) Handles mnuExit.Click
+        Dim result As DialogResult
+
+        result = MessageBox.Show(
+            "Are you sure you want to exit FijiFerry Freight Records System?",
+            "Exit Application",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question)
+
+        If result = DialogResult.Yes Then
+            Application.Exit()
+        End If
+
+
+    End Sub
+
+    Private Sub lblRate_Click(sender As Object, e As EventArgs) Handles lblRate.Click
+
+    End Sub
+
+    Private Sub lblWeight_Click(sender As Object, e As EventArgs) Handles lblWeight.Click
+
     End Sub
 End Class

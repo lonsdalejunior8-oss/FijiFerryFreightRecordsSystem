@@ -62,18 +62,23 @@ Partial Class frmMain
         btnUpdateStatus = New Button()
         btnClear = New Button()
         OpenFileDialog1 = New OpenFileDialog()
+        lblCargoBookings = New Label()
+        grpStatusManagement = New GroupBox()
         MenuStrip1.SuspendLayout()
         grpBookingDetails.SuspendLayout()
+        grpStatusManagement.SuspendLayout()
         SuspendLayout()
         ' 
         ' MenuStrip1
         ' 
+        MenuStrip1.GripStyle = ToolStripGripStyle.Visible
         MenuStrip1.ImageScalingSize = New Size(24, 24)
         MenuStrip1.Items.AddRange(New ToolStripItem() {FileToolStripMenuItem, ViewToolStripMenuItem, SearchToolStripMenuItem, ReportsToolStripMenuItem, mnuExit})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
         MenuStrip1.Padding = New Padding(4, 1, 0, 1)
-        MenuStrip1.Size = New Size(710, 24)
+        MenuStrip1.RenderMode = ToolStripRenderMode.Professional
+        MenuStrip1.Size = New Size(1014, 31)
         MenuStrip1.TabIndex = 0
         MenuStrip1.Text = "MenuStrip1"
         ' 
@@ -81,86 +86,86 @@ Partial Class frmMain
         ' 
         FileToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {mnuOpen, mnuSave})
         FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        FileToolStripMenuItem.Size = New Size(37, 22)
+        FileToolStripMenuItem.Size = New Size(54, 29)
         FileToolStripMenuItem.Text = "File"
         ' 
         ' mnuOpen
         ' 
         mnuOpen.Name = "mnuOpen"
-        mnuOpen.Size = New Size(159, 22)
+        mnuOpen.Size = New Size(242, 34)
         mnuOpen.Text = "Open Cargo File"
         ' 
         ' mnuSave
         ' 
         mnuSave.Name = "mnuSave"
-        mnuSave.Size = New Size(159, 22)
+        mnuSave.Size = New Size(242, 34)
         mnuSave.Text = "Save Cargo File"
         ' 
         ' ViewToolStripMenuItem
         ' 
         ViewToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {mnuStatistics, mnuRouteSummary})
         ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        ViewToolStripMenuItem.Size = New Size(44, 22)
+        ViewToolStripMenuItem.Size = New Size(65, 29)
         ViewToolStripMenuItem.Text = "View"
         ' 
         ' mnuStatistics
         ' 
         mnuStatistics.DropDownItems.AddRange(New ToolStripItem() {ToolStripMenuItem1})
         mnuStatistics.Name = "mnuStatistics"
-        mnuStatistics.Size = New Size(180, 22)
+        mnuStatistics.Size = New Size(242, 34)
         mnuStatistics.Text = "Freight Statistics"
         ' 
         ' ToolStripMenuItem1
         ' 
         ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        ToolStripMenuItem1.Size = New Size(182, 22)
+        ToolStripMenuItem1.Size = New Size(274, 34)
         ToolStripMenuItem1.Text = "ToolStripMenuItem1"
         ' 
         ' mnuRouteSummary
         ' 
         mnuRouteSummary.Name = "mnuRouteSummary"
-        mnuRouteSummary.Size = New Size(180, 22)
+        mnuRouteSummary.Size = New Size(242, 34)
         mnuRouteSummary.Text = "Route Summary"
         ' 
         ' SearchToolStripMenuItem
         ' 
         SearchToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {mnuSearch})
         SearchToolStripMenuItem.Name = "SearchToolStripMenuItem"
-        SearchToolStripMenuItem.Size = New Size(54, 22)
+        SearchToolStripMenuItem.Size = New Size(80, 29)
         SearchToolStripMenuItem.Text = "Search"
         ' 
         ' mnuSearch
         ' 
         mnuSearch.Name = "mnuSearch"
-        mnuSearch.Size = New Size(144, 22)
+        mnuSearch.Size = New Size(219, 34)
         mnuSearch.Text = "Find Booking"
         ' 
         ' ReportsToolStripMenuItem
         ' 
         ReportsToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {mnuCollectedReport})
         ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
-        ReportsToolStripMenuItem.Size = New Size(59, 22)
+        ReportsToolStripMenuItem.Size = New Size(89, 29)
         ReportsToolStripMenuItem.Text = "Reports"
         ' 
         ' mnuCollectedReport
         ' 
         mnuCollectedReport.Name = "mnuCollectedReport"
-        mnuCollectedReport.Size = New Size(197, 22)
+        mnuCollectedReport.Size = New Size(298, 34)
         mnuCollectedReport.Text = "Cargo Collected Report"
         ' 
         ' mnuExit
         ' 
         mnuExit.Name = "mnuExit"
-        mnuExit.Size = New Size(37, 22)
+        mnuExit.Size = New Size(55, 29)
         mnuExit.Text = "Exit"
         ' 
         ' lstBookings
         ' 
         lstBookings.FormattingEnabled = True
-        lstBookings.Location = New Point(29, 46)
+        lstBookings.Location = New Point(41, 120)
         lstBookings.Margin = New Padding(2)
         lstBookings.Name = "lstBookings"
-        lstBookings.Size = New Size(248, 304)
+        lstBookings.Size = New Size(224, 604)
         lstBookings.TabIndex = 1
         ' 
         ' grpBookingDetails
@@ -184,183 +189,183 @@ Partial Class frmMain
         grpBookingDetails.Controls.Add(lblCustomerName)
         grpBookingDetails.Controls.Add(lblBookingID)
         grpBookingDetails.Controls.Add(Label2)
-        grpBookingDetails.Location = New Point(307, 46)
+        grpBookingDetails.Location = New Point(334, 120)
         grpBookingDetails.Margin = New Padding(2)
         grpBookingDetails.Name = "grpBookingDetails"
         grpBookingDetails.Padding = New Padding(2)
-        grpBookingDetails.Size = New Size(372, 304)
+        grpBookingDetails.Size = New Size(636, 604)
         grpBookingDetails.TabIndex = 2
         grpBookingDetails.TabStop = False
         grpBookingDetails.Text = "Booking Details"
         ' 
         ' txtFreightCharge
         ' 
-        txtFreightCharge.Location = New Point(128, 247)
+        txtFreightCharge.Location = New Point(199, 412)
         txtFreightCharge.Margin = New Padding(2)
         txtFreightCharge.Name = "txtFreightCharge"
         txtFreightCharge.ReadOnly = True
-        txtFreightCharge.Size = New Size(213, 23)
+        txtFreightCharge.Size = New Size(392, 31)
         txtFreightCharge.TabIndex = 19
         ' 
         ' txtStatus
         ' 
-        txtStatus.Location = New Point(128, 217)
+        txtStatus.Location = New Point(199, 362)
         txtStatus.Margin = New Padding(2)
         txtStatus.Name = "txtStatus"
         txtStatus.ReadOnly = True
-        txtStatus.Size = New Size(213, 23)
+        txtStatus.Size = New Size(392, 31)
         txtStatus.TabIndex = 18
         ' 
         ' txtRate
         ' 
-        txtRate.Location = New Point(128, 188)
+        txtRate.Location = New Point(199, 314)
         txtRate.Margin = New Padding(2)
         txtRate.Name = "txtRate"
         txtRate.ReadOnly = True
-        txtRate.Size = New Size(213, 23)
+        txtRate.Size = New Size(392, 31)
         txtRate.TabIndex = 17
         ' 
         ' txtWeight
         ' 
-        txtWeight.Location = New Point(128, 160)
+        txtWeight.Location = New Point(199, 266)
         txtWeight.Margin = New Padding(2)
         txtWeight.Name = "txtWeight"
         txtWeight.ReadOnly = True
-        txtWeight.Size = New Size(213, 23)
+        txtWeight.Size = New Size(392, 31)
         txtWeight.TabIndex = 16
         ' 
         ' txtCargoType
         ' 
-        txtCargoType.Location = New Point(128, 131)
+        txtCargoType.Location = New Point(199, 218)
         txtCargoType.Margin = New Padding(2)
         txtCargoType.Name = "txtCargoType"
         txtCargoType.ReadOnly = True
-        txtCargoType.Size = New Size(213, 23)
+        txtCargoType.Size = New Size(392, 31)
         txtCargoType.TabIndex = 15
         ' 
         ' txtDate
         ' 
-        txtDate.Location = New Point(128, 103)
+        txtDate.Location = New Point(199, 172)
         txtDate.Margin = New Padding(2)
         txtDate.Name = "txtDate"
         txtDate.ReadOnly = True
-        txtDate.Size = New Size(213, 23)
+        txtDate.Size = New Size(392, 31)
         txtDate.TabIndex = 14
         ' 
         ' txtRoute
         ' 
-        txtRoute.Location = New Point(128, 74)
+        txtRoute.Location = New Point(199, 124)
         txtRoute.Margin = New Padding(2)
         txtRoute.Name = "txtRoute"
         txtRoute.ReadOnly = True
-        txtRoute.Size = New Size(213, 23)
+        txtRoute.Size = New Size(392, 31)
         txtRoute.TabIndex = 13
         ' 
         ' txtCustomerName
         ' 
-        txtCustomerName.Location = New Point(128, 46)
+        txtCustomerName.Location = New Point(199, 76)
         txtCustomerName.Margin = New Padding(2)
         txtCustomerName.Name = "txtCustomerName"
         txtCustomerName.ReadOnly = True
-        txtCustomerName.Size = New Size(213, 23)
+        txtCustomerName.Size = New Size(392, 31)
         txtCustomerName.TabIndex = 12
         ' 
         ' txtBookingID
         ' 
-        txtBookingID.Location = New Point(128, 19)
+        txtBookingID.Location = New Point(199, 32)
         txtBookingID.Margin = New Padding(2)
         txtBookingID.Name = "txtBookingID"
         txtBookingID.ReadOnly = True
-        txtBookingID.Size = New Size(213, 23)
+        txtBookingID.Size = New Size(392, 31)
         txtBookingID.TabIndex = 11
         ' 
         ' lblFreightCharge
         ' 
         lblFreightCharge.AutoSize = True
-        lblFreightCharge.Location = New Point(24, 251)
+        lblFreightCharge.Location = New Point(27, 418)
         lblFreightCharge.Margin = New Padding(2, 0, 2, 0)
         lblFreightCharge.Name = "lblFreightCharge"
-        lblFreightCharge.Size = New Size(88, 15)
+        lblFreightCharge.Size = New Size(132, 25)
         lblFreightCharge.TabIndex = 10
         lblFreightCharge.Text = "Freight Charge:"
         ' 
         ' lblStatus
         ' 
         lblStatus.AutoSize = True
-        lblStatus.Location = New Point(25, 221)
+        lblStatus.Location = New Point(27, 368)
         lblStatus.Margin = New Padding(2, 0, 2, 0)
         lblStatus.Name = "lblStatus"
-        lblStatus.Size = New Size(42, 15)
+        lblStatus.Size = New Size(64, 25)
         lblStatus.TabIndex = 9
         lblStatus.Text = "Status:"
         ' 
         ' lblRate
         ' 
         lblRate.AutoSize = True
-        lblRate.Location = New Point(27, 192)
+        lblRate.Location = New Point(27, 320)
         lblRate.Margin = New Padding(2, 0, 2, 0)
         lblRate.Name = "lblRate"
-        lblRate.Size = New Size(70, 15)
+        lblRate.Size = New Size(106, 25)
         lblRate.TabIndex = 8
         lblRate.Text = "Rate Per Kg:"
         ' 
         ' lblWeight
         ' 
         lblWeight.AutoSize = True
-        lblWeight.Location = New Point(26, 163)
+        lblWeight.Location = New Point(27, 272)
         lblWeight.Margin = New Padding(2, 0, 2, 0)
         lblWeight.Name = "lblWeight"
-        lblWeight.Size = New Size(73, 15)
+        lblWeight.Size = New Size(108, 25)
         lblWeight.TabIndex = 7
         lblWeight.Text = "Weight (Kg):"
         ' 
         ' lblCargoType
         ' 
         lblCargoType.AutoSize = True
-        lblCargoType.Location = New Point(24, 134)
+        lblCargoType.Location = New Point(27, 224)
         lblCargoType.Margin = New Padding(2, 0, 2, 0)
         lblCargoType.Name = "lblCargoType"
-        lblCargoType.Size = New Size(70, 15)
+        lblCargoType.Size = New Size(106, 25)
         lblCargoType.TabIndex = 6
         lblCargoType.Text = "Cargo Type:"
         ' 
         ' lblDate
         ' 
         lblDate.AutoSize = True
-        lblDate.Location = New Point(24, 107)
+        lblDate.Location = New Point(27, 178)
         lblDate.Margin = New Padding(2, 0, 2, 0)
         lblDate.Name = "lblDate"
-        lblDate.Size = New Size(34, 15)
+        lblDate.Size = New Size(53, 25)
         lblDate.TabIndex = 5
         lblDate.Text = "Date:"
         ' 
         ' lblRoute
         ' 
         lblRoute.AutoSize = True
-        lblRoute.Location = New Point(24, 78)
+        lblRoute.Location = New Point(27, 130)
         lblRoute.Margin = New Padding(2, 0, 2, 0)
         lblRoute.Name = "lblRoute"
-        lblRoute.Size = New Size(41, 15)
+        lblRoute.Size = New Size(62, 25)
         lblRoute.TabIndex = 4
         lblRoute.Text = "Route:"
         ' 
         ' lblCustomerName
         ' 
         lblCustomerName.AutoSize = True
-        lblCustomerName.Location = New Point(24, 49)
+        lblCustomerName.Location = New Point(27, 82)
         lblCustomerName.Margin = New Padding(2, 0, 2, 0)
         lblCustomerName.Name = "lblCustomerName"
-        lblCustomerName.Size = New Size(97, 15)
+        lblCustomerName.Size = New Size(145, 25)
         lblCustomerName.TabIndex = 3
         lblCustomerName.Text = "Customer Name:"
         ' 
         ' lblBookingID
         ' 
         lblBookingID.AutoSize = True
-        lblBookingID.Location = New Point(24, 23)
+        lblBookingID.Location = New Point(27, 38)
         lblBookingID.Margin = New Padding(2, 0, 2, 0)
         lblBookingID.Name = "lblBookingID"
-        lblBookingID.Size = New Size(68, 15)
+        lblBookingID.Size = New Size(105, 25)
         lblBookingID.TabIndex = 2
         lblBookingID.Text = "Booking ID:"
         ' 
@@ -370,7 +375,7 @@ Partial Class frmMain
         Label2.Location = New Point(4, 31)
         Label2.Margin = New Padding(2, 0, 2, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(0, 15)
+        Label2.Size = New Size(0, 25)
         Label2.TabIndex = 1
         ' 
         ' Label1
@@ -379,16 +384,16 @@ Partial Class frmMain
         Label1.Location = New Point(0, 0)
         Label1.Margin = New Padding(2, 0, 2, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(0, 15)
+        Label1.Size = New Size(0, 25)
         Label1.TabIndex = 3
         ' 
         ' lblNewStatus
         ' 
         lblNewStatus.AutoSize = True
-        lblNewStatus.Location = New Point(164, 391)
+        lblNewStatus.Location = New Point(37, 51)
         lblNewStatus.Margin = New Padding(2, 0, 2, 0)
         lblNewStatus.Name = "lblNewStatus"
-        lblNewStatus.Size = New Size(69, 15)
+        lblNewStatus.Size = New Size(104, 25)
         lblNewStatus.TabIndex = 4
         lblNewStatus.Text = "New Status:"
         ' 
@@ -396,28 +401,28 @@ Partial Class frmMain
         ' 
         cboStatus.FormattingEnabled = True
         cboStatus.Items.AddRange(New Object() {"Booked", "Loaded", "Collected"})
-        cboStatus.Location = New Point(246, 386)
+        cboStatus.Location = New Point(153, 43)
         cboStatus.Margin = New Padding(2)
         cboStatus.Name = "cboStatus"
-        cboStatus.Size = New Size(218, 23)
+        cboStatus.Size = New Size(438, 33)
         cboStatus.TabIndex = 5
         ' 
         ' btnUpdateStatus
         ' 
-        btnUpdateStatus.Location = New Point(204, 434)
+        btnUpdateStatus.Location = New Point(252, 135)
         btnUpdateStatus.Margin = New Padding(2)
         btnUpdateStatus.Name = "btnUpdateStatus"
-        btnUpdateStatus.Size = New Size(98, 20)
+        btnUpdateStatus.Size = New Size(140, 50)
         btnUpdateStatus.TabIndex = 6
         btnUpdateStatus.Text = "Update Status"
         btnUpdateStatus.UseVisualStyleBackColor = True
         ' 
         ' btnClear
         ' 
-        btnClear.Location = New Point(326, 434)
+        btnClear.Location = New Point(451, 135)
         btnClear.Margin = New Padding(2)
         btnClear.Name = "btnClear"
-        btnClear.Size = New Size(98, 20)
+        btnClear.Size = New Size(140, 50)
         btnClear.TabIndex = 7
         btnClear.Text = "Clear"
         btnClear.UseVisualStyleBackColor = True
@@ -426,15 +431,36 @@ Partial Class frmMain
         ' 
         OpenFileDialog1.FileName = "OpenFileDialog1"
         ' 
+        ' lblCargoBookings
+        ' 
+        lblCargoBookings.AutoSize = True
+        lblCargoBookings.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblCargoBookings.Location = New Point(38, 84)
+        lblCargoBookings.Name = "lblCargoBookings"
+        lblCargoBookings.Size = New Size(143, 25)
+        lblCargoBookings.TabIndex = 9
+        lblCargoBookings.Text = "Cargo Bookings"
+        ' 
+        ' grpStatusManagement
+        ' 
+        grpStatusManagement.Controls.Add(cboStatus)
+        grpStatusManagement.Controls.Add(lblNewStatus)
+        grpStatusManagement.Controls.Add(btnClear)
+        grpStatusManagement.Controls.Add(btnUpdateStatus)
+        grpStatusManagement.Location = New Point(334, 788)
+        grpStatusManagement.Name = "grpStatusManagement"
+        grpStatusManagement.Size = New Size(636, 210)
+        grpStatusManagement.TabIndex = 10
+        grpStatusManagement.TabStop = False
+        grpStatusManagement.Text = "Status Management  "
+        ' 
         ' frmMain
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(710, 449)
-        Controls.Add(btnClear)
-        Controls.Add(btnUpdateStatus)
-        Controls.Add(cboStatus)
-        Controls.Add(lblNewStatus)
+        ClientSize = New Size(1014, 1050)
+        Controls.Add(grpStatusManagement)
+        Controls.Add(lblCargoBookings)
         Controls.Add(Label1)
         Controls.Add(grpBookingDetails)
         Controls.Add(lstBookings)
@@ -448,6 +474,8 @@ Partial Class frmMain
         MenuStrip1.PerformLayout()
         grpBookingDetails.ResumeLayout(False)
         grpBookingDetails.PerformLayout()
+        grpStatusManagement.ResumeLayout(False)
+        grpStatusManagement.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -492,5 +520,7 @@ Partial Class frmMain
     Friend WithEvents btnClear As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents lblCargoBookings As Label
+    Friend WithEvents grpStatusManagement As GroupBox
 
 End Class

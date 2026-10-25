@@ -46,6 +46,7 @@ Partial Class frmSearch
         lblRoute = New Label()
         lblCustomerName = New Label()
         lblBookingID = New Label()
+        btnClose = New Button()
         grpResults.SuspendLayout()
         grpDetails.SuspendLayout()
         SuspendLayout()
@@ -283,11 +284,22 @@ Partial Class frmSearch
         lblBookingID.TabIndex = 0
         lblBookingID.Text = "Booking ID:"
         ' 
+        ' btnClose
+        ' 
+        btnClose.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnClose.Location = New Point(221, 1042)
+        btnClose.Name = "btnClose"
+        btnClose.Size = New Size(112, 34)
+        btnClose.TabIndex = 9
+        btnClose.Text = "Close"
+        btnClose.UseVisualStyleBackColor = True
+        ' 
         ' frmSearch
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1117, 1046)
+        ClientSize = New Size(1117, 1050)
+        Controls.Add(btnClose)
         Controls.Add(grpDetails)
         Controls.Add(grpResults)
         Controls.Add(btnClear)
@@ -330,4 +342,5 @@ Partial Class frmSearch
     Friend WithEvents txtCustomerName As TextBox
     Friend WithEvents txtBookingID As TextBox
     Friend WithEvents lblStatus As Label
+    Friend WithEvents btnClose As Button
 End Class

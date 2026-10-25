@@ -28,7 +28,6 @@ Partial Class frmMain
         mnuSave = New ToolStripMenuItem()
         ViewToolStripMenuItem = New ToolStripMenuItem()
         mnuStatistics = New ToolStripMenuItem()
-        ToolStripMenuItem1 = New ToolStripMenuItem()
         mnuRouteSummary = New ToolStripMenuItem()
         SearchToolStripMenuItem = New ToolStripMenuItem()
         mnuSearch = New ToolStripMenuItem()
@@ -110,21 +109,14 @@ Partial Class frmMain
         ' 
         ' mnuStatistics
         ' 
-        mnuStatistics.DropDownItems.AddRange(New ToolStripItem() {ToolStripMenuItem1})
         mnuStatistics.Name = "mnuStatistics"
-        mnuStatistics.Size = New Size(242, 34)
+        mnuStatistics.Size = New Size(270, 34)
         mnuStatistics.Text = "Freight Statistics"
-        ' 
-        ' ToolStripMenuItem1
-        ' 
-        ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        ToolStripMenuItem1.Size = New Size(274, 34)
-        ToolStripMenuItem1.Text = "ToolStripMenuItem1"
         ' 
         ' mnuRouteSummary
         ' 
         mnuRouteSummary.Name = "mnuRouteSummary"
-        mnuRouteSummary.Size = New Size(242, 34)
+        mnuRouteSummary.Size = New Size(270, 34)
         mnuRouteSummary.Text = "Route Summary"
         ' 
         ' SearchToolStripMenuItem
@@ -456,7 +448,7 @@ Partial Class frmMain
         ' 
         ' frmMain
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1014, 1050)
         Controls.Add(grpStatusManagement)
@@ -519,7 +511,6 @@ Partial Class frmMain
     Friend WithEvents btnUpdateStatus As Button
     Friend WithEvents btnClear As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents lblCargoBookings As Label
     Friend WithEvents grpStatusManagement As GroupBox
 

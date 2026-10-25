@@ -456,7 +456,7 @@ Partial Class frmMain
         ' 
         ' frmMain
         ' 
-        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1014, 1050)
         Controls.Add(grpStatusManagement)

@@ -304,4 +304,18 @@
     Private Sub lblWeight_Click(sender As Object, e As EventArgs) Handles lblWeight.Click
 
     End Sub
+    Private Sub mnuSearch_Click(sender As Object,
+                            e As EventArgs) Handles mnuSearch.Click
+
+        Dim frm As New frmSearch
+        frm.ShowDialog()
+
+    End Sub
+
+    Private Sub mnuCollectedReport_Click(sender As Object, e As EventArgs) Handles mnuCollectedReport.Click
+
+        Dim frm As New frmCollectedReport
+        frm.ShowDialog()
+
+    End Sub
 End Class

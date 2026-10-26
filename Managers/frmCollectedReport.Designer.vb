@@ -33,7 +33,9 @@ Partial Class frmCollectedReport
         ' lblTitle
         ' 
         lblTitle.AutoSize = True
-        lblTitle.Font = New Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTitle.BackColor = Color.Transparent
+        lblTitle.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTitle.ForeColor = Color.Navy
         lblTitle.Location = New Point(256, 37)
         lblTitle.Name = "lblTitle"
         lblTitle.Size = New Size(232, 28)
@@ -43,6 +45,7 @@ Partial Class frmCollectedReport
         ' grpCollected
         ' 
         grpCollected.Controls.Add(lstCollectedCargo)
+        grpCollected.ForeColor = Color.Navy
         grpCollected.Location = New Point(47, 90)
         grpCollected.Name = "grpCollected"
         grpCollected.Size = New Size(657, 383)
@@ -52,6 +55,8 @@ Partial Class frmCollectedReport
         ' 
         ' lstCollectedCargo
         ' 
+        lstCollectedCargo.BackColor = Color.White
+        lstCollectedCargo.ForeColor = Color.Black
         lstCollectedCargo.FormattingEnabled = True
         lstCollectedCargo.Location = New Point(21, 30)
         lstCollectedCargo.Name = "lstCollectedCargo"
@@ -60,28 +65,37 @@ Partial Class frmCollectedReport
         ' 
         ' btnClose
         ' 
-        btnClose.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnClose.Location = New Point(406, 519)
+        btnClose.BackColor = Color.IndianRed
+        btnClose.FlatStyle = FlatStyle.Flat
+        btnClose.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnClose.ForeColor = Color.White
+        btnClose.Location = New Point(404, 519)
         btnClose.Name = "btnClose"
-        btnClose.Size = New Size(135, 39)
+        btnClose.Size = New Size(135, 53)
         btnClose.TabIndex = 2
         btnClose.Text = "Close"
-        btnClose.UseVisualStyleBackColor = True
+        btnClose.UseVisualStyleBackColor = False
         ' 
         ' btnExport
         ' 
-        btnExport.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnExport.BackColor = Color.RoyalBlue
+        btnExport.FlatStyle = FlatStyle.Flat
+        btnExport.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnExport.ForeColor = Color.White
         btnExport.Location = New Point(196, 519)
         btnExport.Name = "btnExport"
-        btnExport.Size = New Size(159, 39)
+        btnExport.Size = New Size(159, 53)
         btnExport.TabIndex = 3
         btnExport.Text = "Export Report"
-        btnExport.UseVisualStyleBackColor = True
+        btnExport.UseVisualStyleBackColor = False
         ' 
         ' frmCollectedReport
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.WhiteSmoke
+        BackgroundImage = My.Resources.Resources.FormBackground
+        BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(842, 599)
         Controls.Add(btnExport)
         Controls.Add(btnClose)

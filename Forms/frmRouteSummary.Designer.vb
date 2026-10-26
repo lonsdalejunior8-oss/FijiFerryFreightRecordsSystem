@@ -43,20 +43,24 @@ Partial Class frmRouteSummary
         ' 
         ' btnGenerateSummary
         ' 
-        btnGenerateSummary.BackColor = Color.DarkGray
-        btnGenerateSummary.Location = New Point(572, 347)
+        btnGenerateSummary.BackColor = Color.SeaGreen
+        btnGenerateSummary.FlatStyle = FlatStyle.Flat
+        btnGenerateSummary.ForeColor = Color.White
+        btnGenerateSummary.Location = New Point(1031, 397)
         btnGenerateSummary.Name = "btnGenerateSummary"
-        btnGenerateSummary.Size = New Size(250, 45)
+        btnGenerateSummary.Size = New Size(340, 45)
         btnGenerateSummary.TabIndex = 4
         btnGenerateSummary.Text = "Generate Summary"
         btnGenerateSummary.UseVisualStyleBackColor = False
         ' 
         ' lblHeading
         ' 
+        lblHeading.BackColor = Color.Transparent
         lblHeading.Font = New Font("Segoe UI Historic", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblHeading.Location = New Point(279, 25)
+        lblHeading.ForeColor = Color.Navy
+        lblHeading.Location = New Point(279, 27)
         lblHeading.Name = "lblHeading"
-        lblHeading.Size = New Size(274, 21)
+        lblHeading.Size = New Size(274, 36)
         lblHeading.TabIndex = 6
         lblHeading.Text = "FIJIFERRY-ROUTE SUMMARY"
         lblHeading.TextAlign = ContentAlignment.MiddleCenter
@@ -64,74 +68,86 @@ Partial Class frmRouteSummary
         ' lblBookings
         ' 
         lblBookings.AutoSize = True
-        lblBookings.Location = New Point(572, 256)
+        lblBookings.BackColor = Color.Transparent
+        lblBookings.ForeColor = Color.DarkSlateGray
+        lblBookings.Location = New Point(1031, 288)
         lblBookings.Name = "lblBookings"
-        lblBookings.Size = New Size(112, 17)
+        lblBookings.Size = New Size(161, 28)
         lblBookings.TabIndex = 7
         lblBookings.Text = "Total Bookings:"
         ' 
         ' lblTotal
         ' 
         lblTotal.AutoSize = True
-        lblTotal.Location = New Point(572, 201)
+        lblTotal.BackColor = Color.Transparent
+        lblTotal.ForeColor = Color.DarkSlateGray
+        lblTotal.Location = New Point(1031, 233)
         lblTotal.Name = "lblTotal"
-        lblTotal.Size = New Size(98, 17)
+        lblTotal.Size = New Size(142, 28)
         lblTotal.TabIndex = 8
         lblTotal.Text = "Total Weight:"
         ' 
         ' btnClose
         ' 
-        btnClose.BackColor = Color.Tan
-        btnClose.Location = New Point(768, 440)
+        btnClose.BackColor = Color.IndianRed
+        btnClose.FlatStyle = FlatStyle.Flat
+        btnClose.ForeColor = Color.White
+        btnClose.Location = New Point(1217, 448)
         btnClose.Name = "btnClose"
-        btnClose.Size = New Size(54, 25)
+        btnClose.Size = New Size(154, 42)
         btnClose.TabIndex = 10
         btnClose.Text = "Close"
         btnClose.UseVisualStyleBackColor = False
         ' 
         ' lblBookingCount
         ' 
-        lblBookingCount.BackColor = SystemColors.ActiveCaption
-        lblBookingCount.Location = New Point(687, 248)
+        lblBookingCount.BackColor = Color.White
+        lblBookingCount.ForeColor = Color.Black
+        lblBookingCount.Location = New Point(1193, 283)
         lblBookingCount.Name = "lblBookingCount"
-        lblBookingCount.Size = New Size(123, 32)
+        lblBookingCount.Size = New Size(178, 32)
         lblBookingCount.TabIndex = 11
-        lblBookingCount.TextAlign = ContentAlignment.MiddleCenter
+        lblBookingCount.TextAlign = ContentAlignment.MiddleRight
         ' 
         ' lblTotalWeight
         ' 
-        lblTotalWeight.BackColor = SystemColors.ActiveCaption
-        lblTotalWeight.Location = New Point(687, 193)
+        lblTotalWeight.BackColor = Color.White
+        lblTotalWeight.ForeColor = Color.Black
+        lblTotalWeight.Location = New Point(1193, 229)
         lblTotalWeight.Name = "lblTotalWeight"
-        lblTotalWeight.Size = New Size(123, 32)
+        lblTotalWeight.Size = New Size(178, 32)
         lblTotalWeight.TabIndex = 12
-        lblTotalWeight.TextAlign = ContentAlignment.MiddleCenter
+        lblTotalWeight.TextAlign = ContentAlignment.MiddleRight
         ' 
         ' lblSummary
         ' 
-        lblSummary.BackColor = Color.DimGray
-        lblSummary.ForeColor = SystemColors.Control
-        lblSummary.Location = New Point(12, 151)
+        lblSummary.BackColor = Color.Transparent
+        lblSummary.ForeColor = Color.Navy
+        lblSummary.Location = New Point(12, 173)
         lblSummary.Name = "lblSummary"
-        lblSummary.Size = New Size(865, 24)
+        lblSummary.Size = New Size(684, 34)
         lblSummary.TabIndex = 13
         lblSummary.Text = "Route Summary Details"
         lblSummary.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' cboRoute
         ' 
+        cboRoute.BackColor = Color.White
+        cboRoute.ForeColor = Color.Black
         cboRoute.FormattingEnabled = True
-        cboRoute.Location = New Point(223, 91)
+        cboRoute.Location = New Point(223, 106)
         cboRoute.Name = "cboRoute"
-        cboRoute.Size = New Size(137, 25)
+        cboRoute.Size = New Size(188, 36)
         cboRoute.TabIndex = 14
         ' 
         ' lblSelect
         ' 
         lblSelect.AutoSize = True
-        lblSelect.Location = New Point(121, 94)
+        lblSelect.BackColor = Color.Transparent
+        lblSelect.ForeColor = Color.DarkSlateGray
+        lblSelect.Location = New Point(80, 109)
         lblSelect.Name = "lblSelect"
-        lblSelect.Size = New Size(96, 17)
+        lblSelect.Size = New Size(138, 28)
         lblSelect.TabIndex = 15
         lblSelect.Text = "Select Route:"
         lblSelect.TextAlign = ContentAlignment.MiddleCenter
@@ -139,74 +155,87 @@ Partial Class frmRouteSummary
         ' lblDate
         ' 
         lblDate.AutoSize = True
-        lblDate.Location = New Point(461, 94)
+        lblDate.BackColor = Color.Transparent
+        lblDate.ForeColor = Color.DarkSlateGray
+        lblDate.Location = New Point(456, 109)
         lblDate.Name = "lblDate"
-        lblDate.Size = New Size(43, 17)
+        lblDate.Size = New Size(62, 28)
         lblDate.TabIndex = 16
         lblDate.Text = "Date:"
         ' 
         ' dtpSummaryDate
         ' 
         dtpSummaryDate.Format = DateTimePickerFormat.Short
-        dtpSummaryDate.Location = New Point(521, 88)
+        dtpSummaryDate.Location = New Point(521, 103)
         dtpSummaryDate.Name = "dtpSummaryDate"
-        dtpSummaryDate.Size = New Size(137, 25)
+        dtpSummaryDate.Size = New Size(203, 33)
         dtpSummaryDate.TabIndex = 17
         ' 
         ' lstSummary
         ' 
+        lstSummary.Font = New Font("Segoe UI Historic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lstSummary.ForeColor = Color.Black
         lstSummary.FormattingEnabled = True
-        lstSummary.Location = New Point(12, 175)
+        lstSummary.Location = New Point(12, 216)
         lstSummary.Name = "lstSummary"
-        lstSummary.Size = New Size(554, 276)
+        lstSummary.Size = New Size(998, 279)
         lstSummary.TabIndex = 18
         ' 
         ' lblTitleRevenue
         ' 
         lblTitleRevenue.AutoSize = True
-        lblTitleRevenue.Location = New Point(572, 309)
+        lblTitleRevenue.BackColor = Color.Transparent
+        lblTitleRevenue.ForeColor = Color.DarkSlateGray
+        lblTitleRevenue.Location = New Point(1031, 341)
         lblTitleRevenue.Name = "lblTitleRevenue"
-        lblTitleRevenue.Size = New Size(112, 17)
+        lblTitleRevenue.Size = New Size(159, 28)
         lblTitleRevenue.TabIndex = 19
         lblTitleRevenue.Text = "Total Revenue: "
         ' 
         ' lblTotalRevenue
         ' 
-        lblTotalRevenue.BackColor = SystemColors.ActiveCaption
-        lblTotalRevenue.Location = New Point(687, 302)
+        lblTotalRevenue.BackColor = Color.White
+        lblTotalRevenue.ForeColor = Color.Black
+        lblTotalRevenue.Location = New Point(1193, 337)
         lblTotalRevenue.Name = "lblTotalRevenue"
-        lblTotalRevenue.Size = New Size(123, 31)
+        lblTotalRevenue.Size = New Size(178, 31)
         lblTotalRevenue.TabIndex = 20
-        lblTotalRevenue.TextAlign = ContentAlignment.MiddleCenter
+        lblTotalRevenue.TextAlign = ContentAlignment.MiddleRight
         ' 
         ' btnClear
         ' 
-        btnClear.BackColor = SystemColors.ActiveCaption
+        btnClear.BackColor = Color.DarkOrange
+        btnClear.FlatStyle = FlatStyle.Flat
         btnClear.Font = New Font("Segoe UI Historic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnClear.Location = New Point(572, 398)
+        btnClear.ForeColor = Color.White
+        btnClear.Location = New Point(1031, 448)
         btnClear.Name = "btnClear"
-        btnClear.Size = New Size(249, 36)
+        btnClear.Size = New Size(155, 45)
         btnClear.TabIndex = 21
         btnClear.Text = "Clear"
         btnClear.UseVisualStyleBackColor = False
         ' 
         ' btnAllBookings
         ' 
-        btnAllBookings.BackColor = Color.Gainsboro
+        btnAllBookings.BackColor = Color.RoyalBlue
+        btnAllBookings.FlatStyle = FlatStyle.Flat
         btnAllBookings.Font = New Font("Segoe UI Historic", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnAllBookings.Location = New Point(12, 440)
+        btnAllBookings.ForeColor = Color.White
+        btnAllBookings.Location = New Point(12, 514)
         btnAllBookings.Name = "btnAllBookings"
-        btnAllBookings.Size = New Size(756, 25)
+        btnAllBookings.Size = New Size(998, 42)
         btnAllBookings.TabIndex = 22
         btnAllBookings.Text = "Show All "
         btnAllBookings.UseVisualStyleBackColor = False
         ' 
         ' frmRouteSummary
         ' 
-        AutoScaleDimensions = New SizeF(8F, 17F)
+        AutoScaleDimensions = New SizeF(12F, 28F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.Gray
-        ClientSize = New Size(834, 471)
+        BackColor = Color.WhiteSmoke
+        BackgroundImage = My.Resources.Resources.FormBackground
+        BackgroundImageLayout = ImageLayout.Stretch
+        ClientSize = New Size(1407, 758)
         Controls.Add(btnAllBookings)
         Controls.Add(btnClear)
         Controls.Add(lblTotalRevenue)
@@ -225,6 +254,7 @@ Partial Class frmRouteSummary
         Controls.Add(lblHeading)
         Controls.Add(btnGenerateSummary)
         Font = New Font("Segoe UI Historic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ForeColor = Color.DarkSlateGray
         MinimizeBox = False
         Name = "frmRouteSummary"
         StartPosition = FormStartPosition.CenterParent

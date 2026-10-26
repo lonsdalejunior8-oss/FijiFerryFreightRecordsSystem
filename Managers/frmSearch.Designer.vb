@@ -54,8 +54,10 @@ Partial Class frmSearch
         ' lblSearchBy
         ' 
         lblSearchBy.AutoSize = True
+        lblSearchBy.BackColor = Color.Transparent
         lblSearchBy.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblSearchBy.Location = New Point(199, 95)
+        lblSearchBy.ForeColor = Color.DarkSlateGray
+        lblSearchBy.Location = New Point(199, 113)
         lblSearchBy.Name = "lblSearchBy"
         lblSearchBy.Size = New Size(121, 25)
         lblSearchBy.TabIndex = 0
@@ -63,7 +65,9 @@ Partial Class frmSearch
         ' 
         ' txtSearch
         ' 
-        txtSearch.Location = New Point(326, 89)
+        txtSearch.BackColor = Color.White
+        txtSearch.ForeColor = Color.Black
+        txtSearch.Location = New Point(326, 107)
         txtSearch.Name = "txtSearch"
         txtSearch.Size = New Size(260, 31)
         txtSearch.TabIndex = 1
@@ -72,7 +76,8 @@ Partial Class frmSearch
         ' 
         lblTitle.AutoSize = True
         lblTitle.Font = New Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblTitle.Location = New Point(277, 29)
+        lblTitle.ForeColor = Color.Navy
+        lblTitle.Location = New Point(277, 39)
         lblTitle.Name = "lblTitle"
         lblTitle.Size = New Size(301, 28)
         lblTitle.TabIndex = 2
@@ -82,6 +87,7 @@ Partial Class frmSearch
         ' 
         radBookingID.AutoSize = True
         radBookingID.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        radBookingID.ForeColor = Color.DarkSlateGray
         radBookingID.Location = New Point(204, 172)
         radBookingID.Name = "radBookingID"
         radBookingID.Size = New Size(133, 29)
@@ -94,6 +100,7 @@ Partial Class frmSearch
         ' 
         radCustomerName.AutoSize = True
         radCustomerName.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        radCustomerName.ForeColor = Color.DarkSlateGray
         radCustomerName.Location = New Point(204, 207)
         radCustomerName.Name = "radCustomerName"
         radCustomerName.Size = New Size(176, 29)
@@ -104,28 +111,36 @@ Partial Class frmSearch
         ' 
         ' btnSearch
         ' 
+        btnSearch.BackColor = Color.SeaGreen
+        btnSearch.FlatStyle = FlatStyle.Flat
         btnSearch.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSearch.ForeColor = Color.White
         btnSearch.Location = New Point(206, 274)
         btnSearch.Name = "btnSearch"
-        btnSearch.Size = New Size(131, 34)
+        btnSearch.Size = New Size(131, 48)
         btnSearch.TabIndex = 5
         btnSearch.Text = "Search"
-        btnSearch.UseVisualStyleBackColor = True
+        btnSearch.UseVisualStyleBackColor = False
         ' 
         ' btnClear
         ' 
+        btnClear.BackColor = Color.DarkOrange
+        btnClear.FlatStyle = FlatStyle.Flat
         btnClear.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnClear.ForeColor = Color.White
         btnClear.Location = New Point(365, 274)
         btnClear.Name = "btnClear"
-        btnClear.Size = New Size(125, 34)
+        btnClear.Size = New Size(125, 48)
         btnClear.TabIndex = 6
         btnClear.Text = "Clear"
-        btnClear.UseVisualStyleBackColor = True
+        btnClear.UseVisualStyleBackColor = False
         ' 
         ' grpResults
         ' 
+        grpResults.BackColor = Color.Transparent
         grpResults.Controls.Add(lstResults)
         grpResults.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        grpResults.ForeColor = Color.Navy
         grpResults.Location = New Point(218, 362)
         grpResults.Name = "grpResults"
         grpResults.Size = New Size(500, 193)
@@ -135,6 +150,8 @@ Partial Class frmSearch
         ' 
         ' lstResults
         ' 
+        lstResults.BackColor = Color.White
+        lstResults.ForeColor = Color.Black
         lstResults.FormattingEnabled = True
         lstResults.Location = New Point(22, 26)
         lstResults.Name = "lstResults"
@@ -158,6 +175,7 @@ Partial Class frmSearch
         grpDetails.Controls.Add(lblCustomerName)
         grpDetails.Controls.Add(lblBookingID)
         grpDetails.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        grpDetails.ForeColor = Color.Navy
         grpDetails.Location = New Point(221, 623)
         grpDetails.Name = "grpDetails"
         grpDetails.Size = New Size(500, 384)
@@ -167,6 +185,8 @@ Partial Class frmSearch
         ' 
         ' txtStatus
         ' 
+        txtStatus.BackColor = Color.White
+        txtStatus.ForeColor = Color.Black
         txtStatus.Location = New Point(193, 303)
         txtStatus.Name = "txtStatus"
         txtStatus.ReadOnly = True
@@ -175,6 +195,8 @@ Partial Class frmSearch
         ' 
         ' txtWeight
         ' 
+        txtWeight.BackColor = Color.White
+        txtWeight.ForeColor = Color.Black
         txtWeight.Location = New Point(193, 262)
         txtWeight.Name = "txtWeight"
         txtWeight.ReadOnly = True
@@ -183,6 +205,8 @@ Partial Class frmSearch
         ' 
         ' txtCargoType
         ' 
+        txtCargoType.BackColor = Color.White
+        txtCargoType.ForeColor = Color.Black
         txtCargoType.Location = New Point(193, 213)
         txtCargoType.Name = "txtCargoType"
         txtCargoType.ReadOnly = True
@@ -191,6 +215,8 @@ Partial Class frmSearch
         ' 
         ' txtDate
         ' 
+        txtDate.BackColor = Color.White
+        txtDate.ForeColor = Color.Black
         txtDate.Location = New Point(193, 168)
         txtDate.Name = "txtDate"
         txtDate.ReadOnly = True
@@ -199,6 +225,8 @@ Partial Class frmSearch
         ' 
         ' txtRoute
         ' 
+        txtRoute.BackColor = Color.White
+        txtRoute.ForeColor = Color.Black
         txtRoute.Location = New Point(193, 124)
         txtRoute.Name = "txtRoute"
         txtRoute.ReadOnly = True
@@ -207,6 +235,8 @@ Partial Class frmSearch
         ' 
         ' txtCustomerName
         ' 
+        txtCustomerName.BackColor = Color.White
+        txtCustomerName.ForeColor = Color.Black
         txtCustomerName.Location = New Point(193, 85)
         txtCustomerName.Name = "txtCustomerName"
         txtCustomerName.ReadOnly = True
@@ -215,6 +245,8 @@ Partial Class frmSearch
         ' 
         ' txtBookingID
         ' 
+        txtBookingID.BackColor = Color.White
+        txtBookingID.ForeColor = Color.Black
         txtBookingID.Location = New Point(193, 41)
         txtBookingID.Name = "txtBookingID"
         txtBookingID.ReadOnly = True
@@ -224,6 +256,7 @@ Partial Class frmSearch
         ' lblStatus
         ' 
         lblStatus.AutoSize = True
+        lblStatus.ForeColor = Color.DarkSlateGray
         lblStatus.Location = New Point(96, 306)
         lblStatus.Name = "lblStatus"
         lblStatus.Size = New Size(63, 25)
@@ -233,6 +266,7 @@ Partial Class frmSearch
         ' lblWeight
         ' 
         lblWeight.AutoSize = True
+        lblWeight.ForeColor = Color.DarkSlateGray
         lblWeight.Location = New Point(83, 265)
         lblWeight.Name = "lblWeight"
         lblWeight.Size = New Size(76, 25)
@@ -242,6 +276,7 @@ Partial Class frmSearch
         ' lblCargoType
         ' 
         lblCargoType.AutoSize = True
+        lblCargoType.ForeColor = Color.DarkSlateGray
         lblCargoType.Location = New Point(50, 213)
         lblCargoType.Name = "lblCargoType"
         lblCargoType.Size = New Size(109, 25)
@@ -251,6 +286,7 @@ Partial Class frmSearch
         ' lblDate
         ' 
         lblDate.AutoSize = True
+        lblDate.ForeColor = Color.DarkSlateGray
         lblDate.Location = New Point(104, 168)
         lblDate.Name = "lblDate"
         lblDate.Size = New Size(55, 25)
@@ -260,6 +296,7 @@ Partial Class frmSearch
         ' lblRoute
         ' 
         lblRoute.AutoSize = True
+        lblRoute.ForeColor = Color.DarkSlateGray
         lblRoute.Location = New Point(93, 124)
         lblRoute.Name = "lblRoute"
         lblRoute.Size = New Size(66, 25)
@@ -269,6 +306,7 @@ Partial Class frmSearch
         ' lblCustomerName
         ' 
         lblCustomerName.AutoSize = True
+        lblCustomerName.ForeColor = Color.DarkSlateGray
         lblCustomerName.Location = New Point(15, 85)
         lblCustomerName.Name = "lblCustomerName"
         lblCustomerName.Size = New Size(151, 25)
@@ -278,6 +316,7 @@ Partial Class frmSearch
         ' lblBookingID
         ' 
         lblBookingID.AutoSize = True
+        lblBookingID.ForeColor = Color.DarkSlateGray
         lblBookingID.Location = New Point(51, 47)
         lblBookingID.Name = "lblBookingID"
         lblBookingID.Size = New Size(108, 25)
@@ -286,18 +325,24 @@ Partial Class frmSearch
         ' 
         ' btnClose
         ' 
+        btnClose.BackColor = Color.IndianRed
+        btnClose.FlatStyle = FlatStyle.Flat
         btnClose.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnClose.Location = New Point(221, 1042)
+        btnClose.ForeColor = Color.White
+        btnClose.Location = New Point(221, 1027)
         btnClose.Name = "btnClose"
-        btnClose.Size = New Size(112, 34)
+        btnClose.Size = New Size(112, 49)
         btnClose.TabIndex = 9
         btnClose.Text = "Close"
-        btnClose.UseVisualStyleBackColor = True
+        btnClose.UseVisualStyleBackColor = False
         ' 
         ' frmSearch
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.WhiteSmoke
+        BackgroundImage = My.Resources.Resources.FormBackground
+        BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1117, 1050)
         Controls.Add(btnClose)
         Controls.Add(grpDetails)

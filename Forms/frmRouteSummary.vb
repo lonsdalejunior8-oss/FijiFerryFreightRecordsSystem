@@ -54,19 +54,19 @@
         End If
 
         ' Store selected route and date
-        Dim selectedRoute As String = cboRoute.Text
-        Dim selectedDate As Date = dtpSummaryDate.Value.Date
+        Dim selectedRoute = cboRoute.Text
+        Dim selectedDate = dtpSummaryDate.Value.Date
 
         ' Initialize summary variables
-        Dim bookingCount As Integer = 0
-        Dim totalWeight As Decimal = 0D
-        Dim totalRevenue As Decimal = 0D
+        Dim bookingCount = 0
+        Dim totalWeight = 0D
+        Dim totalRevenue = 0D
 
         ' Clear previous summary results
         lstSummary.Items.Clear()
 
         ' Search matching bookings
-        For i As Integer = 0 To RecordCount - 1
+        For i = 0 To RecordCount - 1
 
             Dim BookingDate As Date
 
@@ -81,10 +81,10 @@
                 totalWeight += CDec(Cargo(i).WeightKg)
 
                 ' Calculate freight charge
-                Dim freight As Decimal =
+                Dim freight =
                     CalculateFreight(
-                        CDec(Cargo(i).WeightKg),
-                        CDec(Cargo(i).RatePerKg))
+                        Cargo(i).WeightKg,
+                        Cargo(i).RatePerKg)
 
                 ' Add freight to total revenue
                 totalRevenue += freight
@@ -101,7 +101,7 @@
         Next
 
         ' Display summary statistics
-        lblBookingCount.Text = bookingCount.ToString()
+        lblBookingCount.Text = bookingCount.ToString
         lblTotalWeight.Text = totalWeight.ToString("0.00") & " kg"
         lblTotalRevenue.Text = totalRevenue.ToString("C2")
 
@@ -181,14 +181,14 @@
 
             ' Display full booking details
             lstSummary.Items.Add(
-                "ID: " & Cargo(i).BookingID &
-                " | Customer: " & Cargo(i).CustomerName &
-                " | Route: " & Cargo(i).Route &
-                " | Date: " & Cargo(i).BookingDate &
-                " | Cargo: " & Cargo(i).CargoType &
-                " | Weight: " & CDec(Cargo(i).WeightKg).ToString("0.00") & " kg" &
-                " | Rate: " & CDec(Cargo(i).RatePerKg).ToString("C2") &
-                " | Status: " & Cargo(i).Status)
+                Cargo(i).BookingID &
+                " | " & Cargo(i).CustomerName &
+                " | " & Cargo(i).Route &
+                " | " & Cargo(i).BookingDate &
+                " | " & Cargo(i).CargoType &
+                " | " & CDec(Cargo(i).WeightKg).ToString("0.00") & " kg" &
+                " | " & CDec(Cargo(i).RatePerKg).ToString("C2") &
+                " | " & Cargo(i).Status)
 
         Next
 
@@ -204,4 +204,7 @@
 
     End Sub
 
+    Private Sub lstSummary_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstSummary.SelectedIndexChanged
+
+    End Sub
 End Class

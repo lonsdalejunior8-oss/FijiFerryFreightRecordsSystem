@@ -70,6 +70,7 @@ Partial Class frmMain
         ' 
         ' MenuStrip1
         ' 
+        MenuStrip1.BackColor = Color.MidnightBlue
         MenuStrip1.GripStyle = ToolStripGripStyle.Visible
         MenuStrip1.ImageScalingSize = New Size(24, 24)
         MenuStrip1.Items.AddRange(New ToolStripItem() {FileToolStripMenuItem, ViewToolStripMenuItem, SearchToolStripMenuItem, ReportsToolStripMenuItem, mnuExit})
@@ -84,6 +85,7 @@ Partial Class frmMain
         ' FileToolStripMenuItem
         ' 
         FileToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {mnuOpen, mnuSave})
+        FileToolStripMenuItem.ForeColor = Color.White
         FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         FileToolStripMenuItem.Size = New Size(54, 29)
         FileToolStripMenuItem.Text = "File"
@@ -103,6 +105,7 @@ Partial Class frmMain
         ' ViewToolStripMenuItem
         ' 
         ViewToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {mnuStatistics, mnuRouteSummary})
+        ViewToolStripMenuItem.ForeColor = Color.White
         ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         ViewToolStripMenuItem.Size = New Size(65, 29)
         ViewToolStripMenuItem.Text = "View"
@@ -110,18 +113,19 @@ Partial Class frmMain
         ' mnuStatistics
         ' 
         mnuStatistics.Name = "mnuStatistics"
-        mnuStatistics.Size = New Size(270, 34)
+        mnuStatistics.Size = New Size(242, 34)
         mnuStatistics.Text = "Freight Statistics"
         ' 
         ' mnuRouteSummary
         ' 
         mnuRouteSummary.Name = "mnuRouteSummary"
-        mnuRouteSummary.Size = New Size(270, 34)
+        mnuRouteSummary.Size = New Size(242, 34)
         mnuRouteSummary.Text = "Route Summary"
         ' 
         ' SearchToolStripMenuItem
         ' 
         SearchToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {mnuSearch})
+        SearchToolStripMenuItem.ForeColor = Color.White
         SearchToolStripMenuItem.Name = "SearchToolStripMenuItem"
         SearchToolStripMenuItem.Size = New Size(80, 29)
         SearchToolStripMenuItem.Text = "Search"
@@ -135,6 +139,7 @@ Partial Class frmMain
         ' ReportsToolStripMenuItem
         ' 
         ReportsToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {mnuCollectedReport})
+        ReportsToolStripMenuItem.ForeColor = Color.White
         ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
         ReportsToolStripMenuItem.Size = New Size(89, 29)
         ReportsToolStripMenuItem.Text = "Reports"
@@ -147,17 +152,21 @@ Partial Class frmMain
         ' 
         ' mnuExit
         ' 
+        mnuExit.ForeColor = Color.White
         mnuExit.Name = "mnuExit"
         mnuExit.Size = New Size(55, 29)
         mnuExit.Text = "Exit"
         ' 
         ' lstBookings
         ' 
+        lstBookings.BackColor = Color.White
+        lstBookings.BorderStyle = BorderStyle.FixedSingle
+        lstBookings.ForeColor = Color.Black
         lstBookings.FormattingEnabled = True
         lstBookings.Location = New Point(41, 120)
         lstBookings.Margin = New Padding(2)
         lstBookings.Name = "lstBookings"
-        lstBookings.Size = New Size(224, 604)
+        lstBookings.Size = New Size(224, 602)
         lstBookings.TabIndex = 1
         ' 
         ' grpBookingDetails
@@ -181,6 +190,7 @@ Partial Class frmMain
         grpBookingDetails.Controls.Add(lblCustomerName)
         grpBookingDetails.Controls.Add(lblBookingID)
         grpBookingDetails.Controls.Add(Label2)
+        grpBookingDetails.ForeColor = Color.Navy
         grpBookingDetails.Location = New Point(334, 120)
         grpBookingDetails.Margin = New Padding(2)
         grpBookingDetails.Name = "grpBookingDetails"
@@ -192,6 +202,8 @@ Partial Class frmMain
         ' 
         ' txtFreightCharge
         ' 
+        txtFreightCharge.BackColor = Color.White
+        txtFreightCharge.ForeColor = Color.Black
         txtFreightCharge.Location = New Point(199, 412)
         txtFreightCharge.Margin = New Padding(2)
         txtFreightCharge.Name = "txtFreightCharge"
@@ -201,6 +213,8 @@ Partial Class frmMain
         ' 
         ' txtStatus
         ' 
+        txtStatus.BackColor = Color.White
+        txtStatus.ForeColor = Color.Black
         txtStatus.Location = New Point(199, 362)
         txtStatus.Margin = New Padding(2)
         txtStatus.Name = "txtStatus"
@@ -210,6 +224,8 @@ Partial Class frmMain
         ' 
         ' txtRate
         ' 
+        txtRate.BackColor = Color.White
+        txtRate.ForeColor = Color.Black
         txtRate.Location = New Point(199, 314)
         txtRate.Margin = New Padding(2)
         txtRate.Name = "txtRate"
@@ -219,6 +235,8 @@ Partial Class frmMain
         ' 
         ' txtWeight
         ' 
+        txtWeight.BackColor = Color.White
+        txtWeight.ForeColor = Color.Black
         txtWeight.Location = New Point(199, 266)
         txtWeight.Margin = New Padding(2)
         txtWeight.Name = "txtWeight"
@@ -228,6 +246,8 @@ Partial Class frmMain
         ' 
         ' txtCargoType
         ' 
+        txtCargoType.BackColor = Color.White
+        txtCargoType.ForeColor = Color.Black
         txtCargoType.Location = New Point(199, 218)
         txtCargoType.Margin = New Padding(2)
         txtCargoType.Name = "txtCargoType"
@@ -237,6 +257,8 @@ Partial Class frmMain
         ' 
         ' txtDate
         ' 
+        txtDate.BackColor = Color.White
+        txtDate.ForeColor = Color.Black
         txtDate.Location = New Point(199, 172)
         txtDate.Margin = New Padding(2)
         txtDate.Name = "txtDate"
@@ -246,6 +268,8 @@ Partial Class frmMain
         ' 
         ' txtRoute
         ' 
+        txtRoute.BackColor = Color.White
+        txtRoute.ForeColor = Color.Black
         txtRoute.Location = New Point(199, 124)
         txtRoute.Margin = New Padding(2)
         txtRoute.Name = "txtRoute"
@@ -255,6 +279,8 @@ Partial Class frmMain
         ' 
         ' txtCustomerName
         ' 
+        txtCustomerName.BackColor = Color.White
+        txtCustomerName.ForeColor = Color.Black
         txtCustomerName.Location = New Point(199, 76)
         txtCustomerName.Margin = New Padding(2)
         txtCustomerName.Name = "txtCustomerName"
@@ -264,6 +290,8 @@ Partial Class frmMain
         ' 
         ' txtBookingID
         ' 
+        txtBookingID.BackColor = Color.White
+        txtBookingID.ForeColor = Color.Black
         txtBookingID.Location = New Point(199, 32)
         txtBookingID.Margin = New Padding(2)
         txtBookingID.Name = "txtBookingID"
@@ -274,6 +302,7 @@ Partial Class frmMain
         ' lblFreightCharge
         ' 
         lblFreightCharge.AutoSize = True
+        lblFreightCharge.ForeColor = Color.DarkSlateGray
         lblFreightCharge.Location = New Point(27, 418)
         lblFreightCharge.Margin = New Padding(2, 0, 2, 0)
         lblFreightCharge.Name = "lblFreightCharge"
@@ -284,6 +313,7 @@ Partial Class frmMain
         ' lblStatus
         ' 
         lblStatus.AutoSize = True
+        lblStatus.ForeColor = Color.DarkSlateGray
         lblStatus.Location = New Point(27, 368)
         lblStatus.Margin = New Padding(2, 0, 2, 0)
         lblStatus.Name = "lblStatus"
@@ -294,6 +324,7 @@ Partial Class frmMain
         ' lblRate
         ' 
         lblRate.AutoSize = True
+        lblRate.ForeColor = Color.DarkSlateGray
         lblRate.Location = New Point(27, 320)
         lblRate.Margin = New Padding(2, 0, 2, 0)
         lblRate.Name = "lblRate"
@@ -304,6 +335,7 @@ Partial Class frmMain
         ' lblWeight
         ' 
         lblWeight.AutoSize = True
+        lblWeight.ForeColor = Color.DarkSlateGray
         lblWeight.Location = New Point(27, 272)
         lblWeight.Margin = New Padding(2, 0, 2, 0)
         lblWeight.Name = "lblWeight"
@@ -314,6 +346,7 @@ Partial Class frmMain
         ' lblCargoType
         ' 
         lblCargoType.AutoSize = True
+        lblCargoType.ForeColor = Color.DarkSlateGray
         lblCargoType.Location = New Point(27, 224)
         lblCargoType.Margin = New Padding(2, 0, 2, 0)
         lblCargoType.Name = "lblCargoType"
@@ -324,6 +357,7 @@ Partial Class frmMain
         ' lblDate
         ' 
         lblDate.AutoSize = True
+        lblDate.ForeColor = Color.DarkSlateGray
         lblDate.Location = New Point(27, 178)
         lblDate.Margin = New Padding(2, 0, 2, 0)
         lblDate.Name = "lblDate"
@@ -334,6 +368,7 @@ Partial Class frmMain
         ' lblRoute
         ' 
         lblRoute.AutoSize = True
+        lblRoute.ForeColor = Color.DarkSlateGray
         lblRoute.Location = New Point(27, 130)
         lblRoute.Margin = New Padding(2, 0, 2, 0)
         lblRoute.Name = "lblRoute"
@@ -344,6 +379,7 @@ Partial Class frmMain
         ' lblCustomerName
         ' 
         lblCustomerName.AutoSize = True
+        lblCustomerName.ForeColor = Color.DarkSlateGray
         lblCustomerName.Location = New Point(27, 82)
         lblCustomerName.Margin = New Padding(2, 0, 2, 0)
         lblCustomerName.Name = "lblCustomerName"
@@ -354,6 +390,7 @@ Partial Class frmMain
         ' lblBookingID
         ' 
         lblBookingID.AutoSize = True
+        lblBookingID.ForeColor = Color.DarkSlateGray
         lblBookingID.Location = New Point(27, 38)
         lblBookingID.Margin = New Padding(2, 0, 2, 0)
         lblBookingID.Name = "lblBookingID"
@@ -382,6 +419,7 @@ Partial Class frmMain
         ' lblNewStatus
         ' 
         lblNewStatus.AutoSize = True
+        lblNewStatus.ForeColor = Color.DarkSlateGray
         lblNewStatus.Location = New Point(37, 51)
         lblNewStatus.Margin = New Padding(2, 0, 2, 0)
         lblNewStatus.Name = "lblNewStatus"
@@ -391,6 +429,8 @@ Partial Class frmMain
         ' 
         ' cboStatus
         ' 
+        cboStatus.BackColor = Color.White
+        cboStatus.ForeColor = Color.Black
         cboStatus.FormattingEnabled = True
         cboStatus.Items.AddRange(New Object() {"Booked", "Loaded", "Collected"})
         cboStatus.Location = New Point(153, 43)
@@ -401,23 +441,29 @@ Partial Class frmMain
         ' 
         ' btnUpdateStatus
         ' 
+        btnUpdateStatus.BackColor = Color.SeaGreen
+        btnUpdateStatus.FlatStyle = FlatStyle.Flat
+        btnUpdateStatus.ForeColor = Color.White
         btnUpdateStatus.Location = New Point(252, 135)
         btnUpdateStatus.Margin = New Padding(2)
         btnUpdateStatus.Name = "btnUpdateStatus"
         btnUpdateStatus.Size = New Size(140, 50)
         btnUpdateStatus.TabIndex = 6
         btnUpdateStatus.Text = "Update Status"
-        btnUpdateStatus.UseVisualStyleBackColor = True
+        btnUpdateStatus.UseVisualStyleBackColor = False
         ' 
         ' btnClear
         ' 
+        btnClear.BackColor = Color.DarkOrange
+        btnClear.FlatStyle = FlatStyle.Flat
+        btnClear.ForeColor = Color.White
         btnClear.Location = New Point(451, 135)
         btnClear.Margin = New Padding(2)
         btnClear.Name = "btnClear"
         btnClear.Size = New Size(140, 50)
         btnClear.TabIndex = 7
         btnClear.Text = "Clear"
-        btnClear.UseVisualStyleBackColor = True
+        btnClear.UseVisualStyleBackColor = False
         ' 
         ' OpenFileDialog1
         ' 
@@ -426,7 +472,9 @@ Partial Class frmMain
         ' lblCargoBookings
         ' 
         lblCargoBookings.AutoSize = True
+        lblCargoBookings.BackColor = Color.Transparent
         lblCargoBookings.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblCargoBookings.ForeColor = Color.Navy
         lblCargoBookings.Location = New Point(38, 84)
         lblCargoBookings.Name = "lblCargoBookings"
         lblCargoBookings.Size = New Size(143, 25)
@@ -439,6 +487,7 @@ Partial Class frmMain
         grpStatusManagement.Controls.Add(lblNewStatus)
         grpStatusManagement.Controls.Add(btnClear)
         grpStatusManagement.Controls.Add(btnUpdateStatus)
+        grpStatusManagement.ForeColor = Color.Navy
         grpStatusManagement.Location = New Point(334, 788)
         grpStatusManagement.Name = "grpStatusManagement"
         grpStatusManagement.Size = New Size(636, 210)
@@ -450,6 +499,9 @@ Partial Class frmMain
         ' 
         AutoScaleDimensions = New SizeF(10.0F, 25.0F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.WhiteSmoke
+        BackgroundImage = My.Resources.Resources.FormBackground
+        BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1014, 1050)
         Controls.Add(grpStatusManagement)
         Controls.Add(lblCargoBookings)
